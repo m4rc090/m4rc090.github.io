@@ -1,37 +1,32 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <title>Carlo Mollino furniture by m4rc090</title>
-    <link rel="stylesheet" href="stylesheets/styles.css">
-    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-    <script src="javascripts/main.js"></script>
-    <!--[if lt IE 9]>
-      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
 
+  <head>
+    <meta charset='utf-8' />
+    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
+    <meta name="description" content="Carlo Mollino furniture : Computational Graphic final project 2012-2013" />
+
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+
+    <title>Carlo Mollino furniture</title>
   </head>
+
   <body>
 
-      <header>
-        <h1>Carlo Mollino furniture</h1>
-        <p>Computational Graphic final project 2012-2013</p>
-      </header>
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <a id="forkme_banner" href="https://github.com/m4rc090">View on GitHub</a>
 
-      <div id="banner">
-        <span id="logo"></span>
+          <h1 id="project_title">Carlo Mollino furniture</h1>
+          <h2 id="project_tagline">Computational Graphic final project 2012-2013</h2>
 
-        <a href="https://github.com/m4rc090" class="button fork"><strong>View On GitHub</strong></a>
-      </div><!-- end banner -->
+        </header>
+    </div>
 
-    <div class="wrapper">
-      <nav>
-        <ul></ul>
-      </nav>
-      <section>
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
         <h3>
 <a name="carlo-mollino" class="anchor" href="#carlo-mollino"><span class="octicon octicon-link"></span></a>Carlo Mollino</h3>
 
@@ -70,7 +65,9 @@ The legs profile was created drawing bezier curves, as shown in the plasm.js cod
 <p>var surface1 = MAP(BEZIER(S1)([c1,c2]))(domain2D);`</p>
 
 <p>The drawers were created using the SIMPLEX_GRID function in order to re-create as much accurated and detailed the appearance of drawers. Even for the table was used the SIMPLEX_GRID function.
-Links are very important in the model because they connect the entire stucture of the desk and were implemented as cylinders properly located.</p>
+Links are very important in the model because they connect the entire stucture of the desk and were implemented as cylinders properly located.
+In the pictures below are shown how the model was developed in Plasm.js and all its details.
+<img src="/home/coluzza/RepositoryGitHub/426271/final-project/snapshots/Schermata%20del%202013-07-08%2020_07_36.png" alt="ab"><img src="/home/coluzza/RepositoryGitHub/426271/final-project/snapshots/Schermata%20del%202013-07-08%2020_08_08.png" alt="aab"></p>
 
 <h3>
 <a name="gilda-armchairmettere-screenshots-da-pyplasm-e-i-link-sono-da-cambiare" class="anchor" href="#gilda-armchairmettere-screenshots-da-pyplasm-e-i-link-sono-da-cambiare"><span class="octicon octicon-link"></span></a>Gilda Armchair(Mettere screenshots da pyplasm e i link sono da cambiare)</h3>
@@ -88,11 +85,16 @@ The bolts are well disposed to hold togheter arms and armchair. They were realiz
 Even the lamp model is structured in sub-parts: the lampshade, the pedestal, nodes and links of the structure and mechanism to let links to change radius.
 The lampshade wad realized componing two surfaces modeled like in the pictured using the bezier function. Nodes that stay between links are realized by a custom sphere function, while links are cylinder properly rotated and translated.</p>
       </section>
-      <footer>
-        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://twitter.com/michigangraham">mattgraham</a></small></p>
+    </div>
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
       </footer>
     </div>
-    <!--[if !IE]><script>fixScale(document);</script><![endif]-->
+
     
+
   </body>
 </html>
