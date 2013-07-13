@@ -55,19 +55,20 @@ He was once credited as saying, "Everything is permissible as long as it is fant
 The idea for the model realization was to decompose the object in parts: legs, drawers, table and links for the different parts.
 The legs profile was created drawing bezier curves, as shown in the plasm.js code below, and then drawing surfaces from these curves. Once created the profile, it was extruded to generated the 3D model, then duplicated and disposed as in the picture.</p>
 
-<p>`var point1 = [[1.94, 0, 4.78], [2.89, 0, 5.86], [1.73, 0, 5.34], [6.71, 0, 5.46]];</p>
+<pre><code> var point1 = [[1.94, 0, 4.78], [2.89, 0, 5.86], [1.73, 0, 5.34], [6.71, 0, 5.46]];
 
-<p>var c1 = BEZIER(S0)(point1);</p>
+  var c1 = BEZIER(S0)(point1);
 
-<p>var curve1 = MAP(c1)(domain);</p>
+  var curve1 = MAP(c1)(domain);
 
-<p>var point2 = [[2.48, 0, 5.08], [2.35, 0, 5.55], [4.13, 0, 5.34], [5.01, 0, 5.39]];</p>
+  var point2 = [[2.48, 0, 5.08], [2.35, 0, 5.55], [4.13, 0, 5.34], [5.01, 0, 5.39]];
 
-<p>var c2 = BEZIER(S0)(point2);</p>
+  var c2 = BEZIER(S0)(point2);
 
-<p>var curve2 = MAP(c2)(domain);</p>
+  var curve2 = MAP(c2)(domain);
 
-<p>var surface1 = MAP(BEZIER(S1)([c1,c2]))(domain2D);`</p>
+  var surface1 = MAP(BEZIER(S1)([c1,c2]))(domain2D);
+</code></pre>
 
 <p>The drawers were created using the SIMPLEX_GRID function in order to re-create as much accurated and detailed the appearance of drawers. Even for the table was used the SIMPLEX_GRID function.
 Links are very important in the model because they connect the entire stucture of the desk and were implemented as cylinders properly located.
@@ -91,7 +92,31 @@ In the pictures below are shown how the model was developed in Plasm.js and all 
 <p><img src="http://shard2.1stdibs.us.com/archivesE/upload/9830/21_13/carlo_mollino_1/XXX_Carlo_Mollino_1.jpg" alt="d">
 Even the lamp model is structured in sub-parts: the lampshade, the pedestal, nodes and links of the structure and mechanism to let links to change angulation.
 The lampshade wad realized componing two surfaces modeled like in the pictured using the bezier function. Nodes that stay between links are realized by a custom sphere function, while links are cylinder properly rotated and translated.
-In the pictures below are shown how the model was developed in Plasm.js and all its details.</p>
+The pedestal profile was realized using the bezier function but having curves with less control points like illustrated in the code below:</p>
+
+<pre><code>var point1 = [[0.7, 0, 0], [1, 1, 0]];
+var c1 = BEZIER(S0)(point1);
+var curve1 = MAP(c1)(domain);
+
+var point2 = [[0, 0.7, 0], [1, 1, 0]];
+var c2 = BEZIER(S0)(point2);
+var curve2 = MAP(c2)(domain);
+
+var point3 = [[0, -0.7, 0], [-1, -1, 0]];
+var c3 = BEZIER(S0)(point3);
+var curve3 = MAP(c3)(domain);
+
+var point4 = [[-0.7, 0, 0], [-1, -1, 0]];
+var c4 = BEZIER(S0)(point4);
+var curve4 = MAP(c4)(domain);
+
+var surface1 = MAP(BEZIER(S1)([c1,c3]))(domain2D);
+var surface2 = MAP(BEZIER(S1)([c2,c4]))(domain2D);
+
+surface3 = STRUCT([surface1,surface2]);
+</code></pre>
+
+<p>In the pictures below are shown how the model was developed in Plasm.js and all its details.</p>
 
 <p><img src="https://raw.github.com/cvdlab-cg/426271/master/final-project/snapshots/Schermata%20del%202013-07-08%2020_05_47.png" alt=""><img src="https://raw.github.com/cvdlab-cg/426271/master/final-project/snapshots/Schermata%20del%202013-07-08%2020_06_10.png" alt=""></p>
       </section>
